@@ -1,0 +1,438 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    background-color: #f0f0f0; /* Grigio molto chiaro per un buon contrasto con il nero */
+    color: #000; /* Nero per il massimo contrasto */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Link per saltare al contenuto principale (WCAG 2.4.1 Livello A) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #333; /* Grigio scuro per contrasto con il bianco */
+    color: #fff; /* Bianco per contrasto con il grigio scuro */
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header */
+header[role="banner"] {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+.logo img {
+    max-height: 70px; 
+    max-height: 80px; 
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+nav[role="navigation"] ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav[role="navigation"] ul li {
+    margin-left: 35px;
+}
+
+nav[role="navigation"] ul li a {
+    color: #fff; /* Bianco */
+    text-decoration: none;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+nav[role="navigation"] ul li a:hover,
+nav[role="navigation"] ul li a:focus {
+    background-color: #555; /* Grigio più chiaro per l'hover/focus */
+    outline: 3px solid #ffaa00; /* Indicatore di focus ben visibile */
+    outline-offset: 2px;
+}
+
+/* Main Content */
+main[role="main"] {
+    padding: 30px 0;
+}
+
+article section {
+    background-color: #fff; /* Bianco */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article h1, article h2 {
+    color: #0056b3; /* Blu scuro per un buon contrasto con il bianco */
+    margin-bottom: 20px;
+}
+
+article h1 {
+    font-size: 2.5rem;
+}
+
+article h2 {
+    font-size: 2rem;
+}
+
+article ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+article li {
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+article section ul li h3 {
+    color: #333; /* Grigio scuro per un buon contrasto con il bianco */
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #0056b3; /* Blu scuro */
+    color: #fff; /* Bianco */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #003d82; /* Blu ancora più scuro per l'hover/focus */
+    outline: 3px solid #ffaa00; /* Indicatore di focus ben visibile */
+    outline-offset: 2px;
+}
+
+/* Aside - Informazioni Aggiuntive */
+aside[role="complementary"] section {
+    background-color: #e0e0e0; /* Grigio chiaro */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside h2 {
+    color: #0056b3; /* Blu scuro */
+    margin-bottom: 15px;
+}
+
+aside p {
+    margin-bottom: 10px;
+}
+
+aside a {
+    color: #0056b3; /* Blu scuro */
+    text-decoration: underline; /* Aggiunta sottolineatura per maggiore chiarezza */
+}
+
+aside a:hover,
+aside a:focus {
+    text-decoration: underline;
+    outline: 3px solid #ffaa00; /* Indicatore di focus ben visibile */
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer[role="contentinfo"] {
+    background-color: #333; /* Grigio scuro */
+    color: #f4f4f4; /* Grigio molto chiaro */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav[role="navigation"] ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+footer nav[role="navigation"] ul li {
+    margin: 0 15px;
+}
+
+footer nav[role="navigation"] ul li a {
+    color: #f4f4f4; /* Grigio molto chiaro */
+    text-decoration: none;
+}
+
+footer nav[role="navigation"] ul li a:hover,
+footer nav[role="navigation"] ul li a:focus {
+    text-decoration: underline;
+    outline: 3px solid #ffaa00; /* Indicatore di focus ben visibile */
+    outline-offset: 2px;
+}
+
+/* Stili Specifici per l'Accessibilità */
+
+/* Indicatore di focus ben visibile per tutti gli elementi interattivi */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #ffaa00;
+    outline-offset: 2px;
+}
+
+/* Stili per il breadcrumbs (WCAG 2.4.8 Livello AA) */
+.breadcrumbs {
+    list-style: none;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.breadcrumbs li:not(:last-child):after {
+    content: ">";
+    margin-left: 10px;
+    color: #777; /* Grigio medio */
+}
+
+.breadcrumbs li[aria-current="page"] {
+    font-weight: bold;
+    color: #333; /* Grigio scuro per contrasto */
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav[role="navigation"] ul {
+        flex-direction: column;
+    }
+
+    nav[role="navigation"] ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav[role="navigation"] ul {
+        flex-direction: column;
+    }
+
+    footer nav[role="navigation"] ul li {
+        margin: 10px 0;
+    }
+
+    .breadcrumbs {
+        display: none; 
+    }
+}
+
+
+
+
+.font-size-controls {
+ 
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+
+
+.font-size-controls button {
+    font-size: 1.5em; 
+    padding: 12px 25px; 
+    margin: 25px 35px;
+    border: 3px solid #007bff; 
+    border-radius: 8px; 
+}
+
+
+.font-size-controls button:hover,
+.font-size-controls button:focus {
+    outline: 4px solid #0056b3; /* Rende l'outline di focus più visibile */
+}
+
+#scroll-progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7px;
+  
+    z-index: 1000;
+    filter: brightness(1.2);
+}
+
+
+
+/* Tema scuro */
+body.dark-theme {
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
+}
+
+body.dark-theme header[role="banner"] {
+    background-color: #333;
+    color: #f0f0f0;
+    border-bottom: 1px solid #555;
+}
+
+body.dark-theme a {
+    color: #80cfff; /* Un blu chiaro per i link nel tema scuro */
+}
+
+body.dark-theme .breadcrumbs li a {
+    color: #80cfff;
+}
+
+body.dark-theme .breadcrumbs li[aria-current="page"] {
+    color: #ccc;
+}
+
+body.dark-theme aside[role="complementary"] {
+    background-color: #222;
+    border-color: #444;
+    color: #f0f0f0;
+}
+
+body.dark-theme aside a {
+    color: #80cfff;
+}
+
+body.dark-theme footer[role="contentinfo"] {
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+body.dark-theme .font-size-controls {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-theme .font-size-controls button {
+    background-color: #444;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark-theme .font-size-controls button:hover,
+body.dark-theme .font-size-controls button:focus {
+    background-color: #666;
+    color: #fff;
+    outline-color: #80cfff;
+}
+
+body.dark-theme #scroll-progress-indicator {
+    background-color: #80cfff; /* Un colore chiaro per l'indicatore nel tema scuro */
+}
+
+
+
+/* Tema scuro */
+
+body.dark-theme main {
+    background-color: #1a1a1a;
+    color: #f0f0f0; 
+}
+
+body.dark-theme article {
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
+}
+
+body.dark-theme article section {
+    background-color: #222; 
+    color: #f0f0f0; 
+    border-bottom: 1px solid #333; 
+    padding: 20px;
+}
+
+body.dark-theme article section:last-child {
+    border-bottom: none;
+}
+
+body.dark-theme article h1,
+body.dark-theme article h2,
+body.dark-theme article h3 {
+    color: #f0f0f0; /* Assicura che anche i titoli siano chiari */
+}
+
+body.dark-theme article ul li,
+body.dark-theme article ol li {
+    color: #f0f0f0; /* Assicura che anche gli elementi delle liste siano chiari */
+}
+
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
