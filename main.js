@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Inizializza le stelle (opzionale)
+        
         highlightStars(currentRating);
     }
 });
